@@ -1,0 +1,208 @@
+{
+  "info": {
+    "_postman_id": "f374f2b8-c690-45d6-9af4-4d1399b354d2",
+    "name": "assignment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53304170",
+    "_collection_link": "https://go.postman.co/collection/53304170-f374f2b8-c690-45d6-9af4-4d1399b354d2?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"mike\",\r\n  \"description\": \"High-performance\",\r\n  \"price\": 99,\r\n  \"stockQuantity\": 1,\r\n  \"category\": \"mike\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/products",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register API",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Ansh Malhotra\",\r\n  \"email\": \"ansh@gmail.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/auth/register",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Product By Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/products/6aa1d59b6ab5a0930b1a9100",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "products",
+            "6aa1d59b6ab5a0930b1a9100"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"products\": [\r\n    { \"productId\": \"6aa1d56f6ab5a0930b1a90fe\", \"quantity\": 2 }\r\n  ]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/orders",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "orders"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all orders",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Single order",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
